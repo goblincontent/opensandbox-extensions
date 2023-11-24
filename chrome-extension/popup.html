@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Video ID Summariser</title>
+    <style>
+        body {
+            min-width: 800px;
+            min-height: 600px;
+            font-family: 'Arial', sans-serif;
+            background-color: #f4f4f4;
+            padding: 20px;
+        }
+
+        h1, h3 {
+            text-align: center;
+        }
+
+        div {
+            margin-bottom: 15px;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 5px;
+            font-weight: bold;
+        }
+
+        #collection-input, #big-textarea {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            font-size: 1rem;
+            transition: border-color 0.2s;
+        }
+
+        #big-textarea {
+            width: 100%;  /* Taking full width of the parent container */
+            height: 150px;  /* Setting a fixed height */
+            resize: vertical;  /* Allowing only vertical resizing */
+            margin-top: 10px;  /* Providing some space at the top */
+        }
+
+        #collection-input:focus, #big-textarea:focus {
+            border-color: #4285f4;
+            outline: none;
+            box-shadow: 0 0 5px rgba(66, 133, 244, 0.5);
+        }
+
+        button {
+            padding: 10px 15px;
+            border: none;
+            border-radius: 5px;
+            background-color: #4285f4;
+            color: #ffffff;
+            font-size: 1rem;
+            cursor: pointer;
+            margin-right: 10px;
+            transition: background-color 0.2s;
+        }
+
+        button:hover {
+            background-color: #357ab7;
+        }
+
+    </style>
+</head>
+<body>
+    <div><h1>Detected:</h1></div>
+    <div><h3 id="videoIdContainer"></h3></div>
+    <div>
+        <label for="collection-input">Collection Name</label>
+        <input type="text" id="collection-input" placeholder="collection_name">
+    </div>
+
+    <div>
+        <label for="big-textarea">Your Text:</label>
+        <textarea id="big-textarea" placeholder="Enter your text here..."></textarea>
+    </div>
+
+    <div class="buttons">
+        <button id="get-video">Send Video ID</button>
+        <button id="get-channel">Send Channel ID</button>
+        <button id="get-url">Send URL</button>
+        <button id="send-text">Send Text</button>
+    </div>
+    <script src="popup.js"></script>
+    <!-- <script src="unsafe-inline">
+        window.resizeTo(1000, 600);
+    </script> -->
+</body>
+</html>

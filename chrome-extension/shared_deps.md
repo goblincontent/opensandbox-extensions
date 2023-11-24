@@ -1,0 +1,11 @@
+Plan:
+
+1. `manifest.json`: This is the main file for any Firefox extension. It specifies basic metadata about the extension such as the name and version, and also specifies the permissions that the extension requires. In our case, we will need at least the "activeTab" permission to read the URL of the current tab. We will also need to specify the location of our background and popup scripts. No variables are exported from this file.
+
+2. `background.js`: This script runs in the background of the browser and is responsible for reading the current URL, parsing out the YouTube video ID, and storing it in a variable. The video ID will be stored in a global variable named `videoId`. This script will also use the `chrome.tabs` API to get the current tab's URL. The function to get the video ID will be named `getVideoId`.
+
+3. `popup.html`: This is the HTML file for the popup UI. It will contain a single `div` with an id of `videoIdContainer` where the video ID will be displayed, and a `button` with an id of `submitButton`. When the `submitButton` is clicked, it should call a function named `submit`.
+
+4. `popup.js`: This script is responsible for displaying the video ID in the popup and handling the submit button click. It will import the `videoId` variable from the background script and display it in the `videoIdContainer` div. When the `submitButton` is clicked, it will log the `videoId` to the console. The function to display the video ID will be named `displayVideoId`, and the function to handle the submit button click will be named `submit`.
+
+In summary, the app will consist of four files: `manifest.json`, `background.js`, `popup.html`, and `popup.js`. The `background.js` script will export a variable named `videoId`, and the `popup.js` script will use that variable to display the video ID in the popup and log it to the console when the submit button is clicked. The DOM elements that the `popup.js` script will use are a div with an id of `videoIdContainer` and a button with an id of `submitButton`. The main functions in the script files are `getVideoId`, `displayVideoId`, and `submit`.
