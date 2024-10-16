@@ -1,0 +1,6 @@
+env/
+global-bundle.pem
+AWSKeypair.pem
+*.pyc
+.env
+ssh_tunnel.sh

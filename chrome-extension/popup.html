@@ -35,10 +35,10 @@
         }
 
         #big-textarea {
-            width: 100%;  /* Taking full width of the parent container */
-            height: 150px;  /* Setting a fixed height */
-            resize: vertical;  /* Allowing only vertical resizing */
-            margin-top: 10px;  /* Providing some space at the top */
+            width: 100%;
+            height: 150px;
+            resize: vertical;
+            margin-top: 10px;
         }
 
         #collection-input:focus, #big-textarea:focus {
@@ -63,6 +63,17 @@
             background-color: #357ab7;
         }
 
+        .checkbox-container {
+            display: flex;
+            align-items: center;
+            margin-bottom: 15px;
+        }
+
+        .checkbox-container label {
+            margin-left: 10px;
+            font-weight: normal;
+        }
+
     </style>
 </head>
 <body>
@@ -78,6 +89,11 @@
         <textarea id="big-textarea" placeholder="Enter your text here..."></textarea>
     </div>
 
+    <div class="checkbox-container">
+        <input type="checkbox" id="vectorize-checkbox">
+        <label for="vectorize-checkbox">Vectorize</label>
+    </div>
+
     <div class="buttons">
         <button id="get-video">Send Video ID</button>
         <button id="get-channel">Send Channel ID</button>
@@ -85,8 +101,5 @@
         <button id="send-text">Send Text</button>
     </div>
     <script src="popup.js"></script>
-    <!-- <script src="unsafe-inline">
-        window.resizeTo(1000, 600);
-    </script> -->
 </body>
 </html>

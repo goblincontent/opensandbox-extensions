@@ -1,0 +1,11 @@
+flask
+Flask-Cors
+chromadb
+trafilatura
+langchain
+langchain-community
+pymongo
+lxml_html_clean
+openai
+youtube-transcript-api
+pytube
